@@ -1,5 +1,5 @@
 function notice(req, res) {
-    res.render('base');
+    res.render('notice');
 }
 
 module.exports = {
