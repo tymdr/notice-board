@@ -1,11 +1,14 @@
 const express=require('express');
 const app=express();
+const config=require('./config');
 const routes=require('./routes');
+const twig=require('twig');
 
 app.set('view engine','twig');
+twig.cache(config.production);
 app.use('/', routes);
 
-const port = 5050;
+const port = config.port;
 app.use(express.static(__dirname + '/public'));
 
 

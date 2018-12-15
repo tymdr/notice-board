@@ -1,0 +1,270 @@
+{% extends "base.twig" %}
+{% block title %}Document{% endblock %}
+
+{% block body %}
+<main class="home page fw">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="nav flex-column nav-pills">
+                    <a class="nav-link active" href="#">All</a>
+                    <a class="nav-link" href="#">Official</a>
+                    <a class="nav-link" href="#">Examinations</a>
+                    <a class="nav-link" href="#">General</a>
+                    <a class="nav-link" href="#">Events</a>
+                    <a class="nav-link" href="#">Promotions</a>
+                    <a class="nav-link" href="#">Lost and Found</a>
+                    <a class="nav-link" href="#">Miscellaneous</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="notice card mb-4">
+                    <div class="card-body">
+                        <h5>Notice title</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id leo sodales, accumsan
+                            justo ut, accumsan magna. Quisque ante sem, tincidunt at dolor vitae, varius suscipit ante.
+                            Phasellus sit amet volutpat massa. Pellentesque vel convallis orci. Nunc a tristique lorem.
+                            Pellentesque dictum sodales tempor. Integer molestie nunc ipsum, id gravida lorem molestie
+                            id. Donec consectetur ac dolor vel sagittis.</p>
+                        <div class="attachments">
+                            <h6 class="text-uppercase text-muted">Attachments</h6>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa fa-file-pdf-o text-danger"></i>
+                                    <span>Cras justo odio</span>
+                                    <span class="badge badge-primary badge-pill float-right">
+                                        <i class="fa fa-download"></i>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa fa-file-excel-o text-success"></i>
+                                    <span>Dapibus ac facilisis in</span>
+                                    <span class="ml-auto badge badge-primary badge-pill float-right">
+                                        <i class="fa fa-download"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="notice-meta d-flex flex-row">
+                            <div class="avatar">
+                                <img class="rounded" src="https://robohash.org/1.png?set=set1&amp;size=32x32" width="32"
+                                    height="32">
+                            </div>
+                            <div class="ml-1 d-flex flex-column author-time">
+                                <span class="author font-weight-bold">Hello Robot</span>
+                                <span class="time text-muted">2 hours ago</span>
+                            </div>
+                            <div class="ml-auto">
+                                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#comment-box-1"
+                                    aria-expanded="true">
+                                    <i class="fa fa-comments"></i>
+                                    Comments
+                                    <span class="badge badge-primary">2</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="comment-box-1" class="comments mt-2 collapse show">
+                            <ul class="list-unstyled">
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/2.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/3.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/4.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="text-center mb-2">
+                                    <a href="#">Show more...</a>
+                                </li>
+                                <li class="input-group mb-3">
+                                    <input class="form-control" placeholder="Enter your comment" type="text">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fa fa-image"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="notice card mb-4">
+                    <img class="card-img-top" src="https://picsum.photos/640/480" alt="Card image cap">
+                    <div class="card-body">
+                        <h5>Notice title</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id leo sodales, accumsan
+                            justo ut, accumsan magna. Quisque ante sem, tincidunt at dolor vitae, varius suscipit ante.
+                            Phasellus sit amet volutpat massa. Pellentesque vel convallis orci. Nunc a tristique lorem.
+                            Pellentesque dictum sodales tempor. Integer molestie nunc ipsum, id gravida lorem molestie
+                            id. Donec consectetur ac dolor vel sagittis.</p>
+                        <div class="attachments">
+                            <h6 class="text-uppercase text-muted">Attachments</h6>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa fa-file-pdf-o text-danger"></i>
+                                    <span>Cras justo odio</span>
+                                    <span class="badge badge-primary badge-pill float-right">
+                                        <i class="fa fa-download"></i>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa fa-file-excel-o text-success"></i>
+                                    <span>Dapibus ac facilisis in</span>
+                                    <span class="ml-auto badge badge-primary badge-pill float-right">
+                                        <i class="fa fa-download"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="notice-meta d-flex flex-row">
+                            <div class="avatar">
+                                <img class="rounded" src="https://robohash.org/1.png?set=set1&amp;size=32x32" width="32"
+                                    height="32">
+                            </div>
+                            <div class="ml-1 d-flex flex-column author-time">
+                                <span class="author font-weight-bold">Hello Robot</span>
+                                <span class="time text-muted">2 hours ago</span>
+                            </div>
+                            <div class="ml-auto">
+                                <button type="button" class="btn btn-default collapsed" data-toggle="collapse"
+                                    data-target="#comment-box-1" aria-expanded="false">
+                                    <i class="fa fa-comments"></i>
+                                    Comments
+                                    <span class="badge badge-primary">2</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="comment-box-1" class="comments mt-2 collapse" style="">
+                            <ul class="list-unstyled">
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/2.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/3.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/4.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="text-center mb-2">
+                                    <a href="#">Show more...</a>
+                                </li>
+                                <li class="input-group mb-3">
+                                    <input class="form-control" placeholder="Enter your comment" type="text">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fa fa-image"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="card-body d-flex flex-column">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-secondary md-4" data-toggle="modal" data-target="#exampleModalCenter">
+                            Post New
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <label for="exampleFormControlInput1">Title</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1">
+                                    </div>
+                                    <div class="modal-body">
+                                        <label for="exampleFormControlTextarea1">Message</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <label for="exampleFormControlSelect1">Type</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="modal-footer">
+
+                                        <button type="button" class="btn btn-primary">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-secondary">Invite Members</a>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header">
+                        About
+                    </div>
+                    <div class="card-body">
+                        <p>This is a notice board</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
