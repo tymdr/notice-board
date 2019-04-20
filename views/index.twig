@@ -18,7 +18,102 @@
                 </div>
             </div>
             <div class="col-md-6">
+                {% for notice in notices %}
                 <div class="notice card mb-4">
+                    <div class="card-body">
+                        <h5>{{ notice.title }}</h5>
+                        <p>{{ notice.message }}</p>
+                        <!-- <div class="attachments">
+                            <h6 class="text-uppercase text-muted">Attachments</h6>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa fa-file-pdf-o text-danger"></i>
+                                    <span>Cras justo odio</span>
+                                    <span class="badge badge-primary badge-pill float-right">
+                                        <i class="fa fa-download"></i>
+                                    </span>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <i class="fa fa-file-excel-o text-success"></i>
+                                    <span>Dapibus ac facilisis in</span>
+                                    <span class="ml-auto badge badge-primary badge-pill float-right">
+                                        <i class="fa fa-download"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="card-footer">
+                        <div class="notice-meta d-flex flex-row">
+                            <div class="avatar">
+                                <img class="rounded" src="https://robohash.org/1.png?set=set1&amp;size=32x32" width="32"
+                                    height="32">
+                            </div>
+                            <div class="ml-1 d-flex flex-column author-time">
+                                <span class="author font-weight-bold">Hello Robot</span>
+                                <span class="time text-muted">2 hours ago under {{notice.type}}</span>
+                            </div>
+                            <div class="ml-auto">
+                                <button type="button" class="btn btn-default" data-toggle="collapse"
+                                    data-target="#comment-box-1" aria-expanded="true">
+                                    <i class="fa fa-comments"></i>
+                                    Comments
+                                    <span class="badge badge-primary">0</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- <div id="comment-box-1" class="comments mt-2 collapse show">
+                            <ul class="list-unstyled">
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/2.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/3.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="media mb-2">
+                                    <img class="rounded mr-1" src="https://robohash.org/4.png?set=set1&amp;size=32x32"
+                                        width="32" height="32">
+                                    <div class="media-body">
+                                        <h6 class="mt-0 mb-1 font-weight-bold">Hello Robot</h6>
+                                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante
+                                        sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra
+                                        turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia
+                                        congue felis in faucibus.
+                                    </div>
+                                </li>
+                                <li class="text-center mb-2">
+                                    <a href="#">Show more...</a>
+                                </li>
+                                <li class="input-group mb-3">
+                                    <input class="form-control" placeholder="Enter your comment" type="text">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary">
+                                            <i class="fa fa-image"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+                {% endfor %}
+                <!-- <div class="notice card mb-4">
                     <div class="card-body">
                         <h5>Notice title</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id leo sodales, accumsan
@@ -212,45 +307,19 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body d-flex flex-column">
 
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-secondary md-4" data-toggle="modal" data-target="#exampleModalCenter">
+                        <button type="button" class="btn btn-secondary md-4" data-toggle="modal"
+                            data-target="#add-post-modal">
                             Post New
                         </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-                            aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <label for="exampleFormControlInput1">Title</label>
-                                        <input type="text" name="title" class="form-control" id="exampleFormControlInput1">
-                                    </div>
-                                    <div class="modal-body">
-                                        <label for="exampleFormControlTextarea1">Message</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3"></textarea>
-                                        <label for="exampleFormControlSelect1">Type</label>
-                                        <select class="form-control" id="exampleFormControlSelect1">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                        </select>
-                                    </div>
-                                    <div class="modal-footer">
 
-                                        <button type="button" class="btn btn-primary">Submit</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                         <a href="#" class="btn btn-secondary">Invite Members</a>
                     </div>
@@ -267,4 +336,44 @@
         </div>
     </div>
 </main>
+<div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form method="POST" class="modal-content" action="/notice">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add notice</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input name="title" class="form-control" type="text" placeholder="Enter title">
+                </div>
+                <div class="form-group">
+                    <select name="type" class="form-control">
+                        <option selected>Select category</option>
+                        <option value="1">Official Notice</option>
+                        <option value="2">Examinations</option>
+                        <option value="3">General</option>
+                        <option value="4">Events</option>
+                        <option value="5">Promotion</option>
+                        <option value="6">Lost &amp; Found</option>
+                        <option value="7">Miscellaneous</option>
+                    </select>
+                    <small class="form-text text-muted">
+                        Choose the correct category. Choosing the wrong category may lead to rejection of this post.
+                    </small>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="10" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+
 {% endblock %}
