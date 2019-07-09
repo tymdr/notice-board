@@ -1,0 +1,54 @@
+{% extends "admin/index.twig" %}
+
+{% block name %}Category{% endblock name %}
+
+{% block content %}
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+    <h1 class="h2">{% block name %}Dashboard{% endblock %}</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Add</button>
+        </div>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Slug
+        </th>
+    </tr>
+    {% for category in array %}
+    <tr>
+        <td>category.name</td>
+        <td>category.slug</td>
+    </tr>
+    {% endfor %}
+</table>
+<div class="modal fade" id="add-post-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <form method="POST" class="modal-content" action="/notice">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input name="name" class="form-control" type="text" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input name="slug" class="form-control" type="text" placeholder="Slug">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Post</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
